@@ -32,4 +32,4 @@ I build LLM agents and the machinery that makes them trustworthy: post-training 
 
 ### Stack
 
-Python, PyTorch, TRL / PEFT, Hugging Face Transformers, vLLM (inference for evals), pydantic, pytest; DSPy, LiteLLM, Pydantic AI from the inside.
+Python, PyTorch, TRL / PEFT, Hugging Face Transformers, pydantic, pytest; DSPy, LiteLLM, Pydantic AI from the inside.
