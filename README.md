@@ -1,6 +1,12 @@
 ## Hi, I'm Hazel Xue
 
-MS student focused on LLM applications and agent systems. I contribute to open-source AI tooling by finding real bugs the way users hit them: running projects on platforms and dependency versions their CI does not cover, reducing each failure to a minimal reproduction, and sending the fix with a regression test.
+I build LLM agents and the machinery that makes them trustworthy: post-training loops, data synthesis, evaluation gates, and the sandboxing that lets an agent run code safely. MS student, open to **ML Engineer / AI Engineer internships** working on LLM agents, post-training, or evaluation.
+
+**What I have shipped**
+
+- **Agent post-training.** Designed and landed a bounded self-evolution loop for an SFT → DPO → GRPO ReAct tool-use agent: diagnose weak task families from eval traces, mine bad cases, synthesize targeted training data from train-only parents, freeze every round behind SHA256 manifests, and accept the new policy only if a no-regression gate passes on frozen held-out splits. Agreed with the maintainer before writing code; merged.
+- **Verified generation.** Built a Claude Code skill where the model emits a typed spec instead of final output, every factual claim is an executable check against the data, and a gate blocks compilation on failure. Ran an ablation with real model calls: measuring first raised first-draft acceptance from 0% to 100% and halved cost.
+- **Agent-framework reliability.** Found and fixed subprocess, sandbox and test-isolation bugs in DSPy, LiteLLM, Pydantic AI and cassetter by running their suites where their CI does not (Windows, newest dependencies), bisecting to a root cause, and shipping a regression test with each fix.
 
 ### Open source
 
@@ -18,4 +24,12 @@ MS student focused on LLM applications and agent systems. I contribute to open-s
 
 ### Interests
 
-Agentic RL (GRPO/DAPO, verifiable rewards), tool-use agents, evaluation and reproducibility.
+- **Agentic RL and post-training**: GRPO / DAPO, RL with verifiable rewards, SFT → preference → RL curricula, reward design for tool use.
+- **Data engines**: targeted synthesis from failure analysis, parametric task derivation, leakage control between train and held-out splits.
+- **Evaluation**: pass@k / pass³ on frozen splits, LLM-as-judge with blind rubrics, bad-case libraries that only grow, deterministic offline replay of tool calls.
+- **Agent runtimes**: ReAct tool-use loops, code sandboxes and process isolation (Job Objects, process groups), structured outputs as the contract between model and code.
+- **Reproducibility**: SHA256-frozen data manifests, recipe pinning, honest Before/After reporting, including when the gate says no.
+
+### Stack
+
+Python, PyTorch, TRL / PEFT, Hugging Face Transformers, vLLM (inference for evals), pydantic, pytest; DSPy, LiteLLM, Pydantic AI from the inside.
