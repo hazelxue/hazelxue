@@ -12,6 +12,10 @@ MS student focused on LLM applications and agent systems. I contribute to open-s
 | [cassetter](https://github.com/Kludex/cassetter) · HTTP record/replay for pytest | One crashed xdist worker aborted the whole session with `INTERNALERROR`, hiding every other result; fixed with a pytester regression test ([#143](https://github.com/Kludex/cassetter/issues/143), [#144](https://github.com/Kludex/cassetter/pull/144)) | in review |
 | [Pydantic AI](https://github.com/pydantic/pydantic-ai) | Proposal: Windows support for `LocalWorkspace` via a kill-on-close Job Object, with a line-referenced analysis of the POSIX-only paths and a Windows spike verifying the Job Object teardown and `anyio` creation flags ([#9873](https://github.com/pydantic/pydantic-ai/issues/9873)) | triaged · under maintainer discussion |
 
+### Projects
+
+- [storymap-gen](https://github.com/hazelxue/storymap-gen) · a Claude Code skill plus Python pipeline that turns a topic and GIS data into an ArcGIS StoryMap. The model only emits a typed spec (pydantic); every claim about the data is an executable check against the layer (street-vs-grid bearing, layer statistics), and a quality gate refuses to compile a story with a failing claim. Ablation with real model calls: handing the writer measured facts before drafting raised first-draft acceptance from 0% to 100% and halved cost per story. 26 tests; all three layouts load in the live StoryMaps Builder.
+
 ### Interests
 
 Agentic RL (GRPO/DAPO, verifiable rewards), tool-use agents, evaluation and reproducibility.
