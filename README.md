@@ -30,7 +30,7 @@ I build LLM agents and the machinery that makes them trustworthy: post-training 
 
 ### Projects
 
-- [storymap-gen](https://github.com/hazelxue/storymap-gen) · a Claude Code skill plus Python pipeline that turns a topic and GIS data into an ArcGIS StoryMap. The model only emits a typed spec (pydantic); every claim about the data is an executable check against the layer (street-vs-grid bearing, layer statistics), and a quality gate refuses to compile a story with a failing claim. Ablation with real model calls: handing the writer measured facts before drafting raised first-draft acceptance from 0% to 100% and halved cost per story. 26 tests; all three layouts load in the live StoryMaps Builder.
+- [storymap-gen](https://github.com/hazelxue/storymap-gen) · a Claude Code skill plus Python pipeline that turns a topic and GIS data into an ArcGIS StoryMap. The model only emits a typed spec (pydantic); every claim about the data is an executable check against the layer (street-vs-grid bearing, layer statistics), and a quality gate refuses to compile a story with a failing claim. Ablation with real model calls: handing the writer measured facts before drafting raised claim accuracy from 80% to 100% and first-draft acceptance from 0% to 100%, and halved cost per story. 484 tests (unit, property-based, fuzz, MCP protocol, security regressions, offline end-to-end); all three layouts load in the live StoryMaps Builder.
 
 ### Interests
 
