@@ -11,6 +11,7 @@ I build LLM agents and the machinery that makes them trustworthy: post-training 
 ### Projects
 
 - [storymap-gen](https://github.com/hazelxue/storymap-gen) · a Claude Code skill plus Python pipeline that turns a topic and GIS data into an ArcGIS StoryMap. The model only emits a typed spec (pydantic); every claim about the data is an executable check against the layer (street-vs-grid bearing, layer statistics), and a quality gate refuses to compile a story with a failing claim. Ablation with real model calls: handing the writer measured facts before drafting raised claim accuracy from 80% to 100% and first-draft acceptance from 0% to 100%, and halved cost per story. 484 tests (unit, property-based, fuzz, MCP protocol, security regressions, offline end-to-end); all three layouts load in the live StoryMaps Builder.
+- [fda-predicate-spike](https://github.com/hazelxue/fda-predicate-spike) · can a predicate-retrieval benchmark be built from public FDA 510(k) data, with the predicate a device actually cited as ground truth? One evening, 176K clearances: in a random sample of 400 recent summaries, 93% yield a cited predicate by regex and 99% of those K numbers resolve to a record; a metadata-only TF-IDF baseline with a temporal cutoff puts a cited predicate in the top 10 for 66% of queries, and a product-code filter keeps 95% of the truth while shrinking the pool from 167K to about 190. Write-up lists the benchmark decisions that come first (predicate vs. reference device, multi-predicate metric, self-predicate shortcut, split by year).
 
 ### Open source
 
